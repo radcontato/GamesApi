@@ -46,6 +46,7 @@
     <Compile Include="Entities\GameConsole.cs" />
     <Compile Include="Entities\MyGame.cs" />
     <Compile Include="Entities\Player.cs" />
+    <Compile Include="Enum\StatusPlayerEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueObjests\Email.cs" />
     <Compile Include="ValueObjests\NamePerson.cs" />
