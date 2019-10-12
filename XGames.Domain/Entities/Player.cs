@@ -1,4 +1,5 @@
 ﻿using System;
+using XGames.Domain.Enum;
 using XGames.Domain.ValueObjests;
 
 namespace XGames.Domain.Entities
@@ -9,6 +10,6 @@ namespace XGames.Domain.Entities
         public NamePerson NamePerson { get; set; }
         public Email Email { get; set; }
         public string Senha { get; set; }
-        public int Status { get; set; }
+        public StatusPlayerEnum Status { get; set; }
     }
 }
