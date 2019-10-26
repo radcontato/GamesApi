@@ -9,6 +9,10 @@ namespace XGames.Domain.Services
     {
         private readonly IPlayerRepository _playerRepository;
 
+        public PlayerService()
+        {
+
+        }
 
         public PlayerService(IPlayerRepository playerRepository)
         {
