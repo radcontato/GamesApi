@@ -55,6 +55,7 @@
     <Compile Include="Enum\StatusPlayerEnum.cs" />
     <Compile Include="Interfaces\Arguments\IRequest.cs" />
     <Compile Include="Interfaces\Arguments\IResponse.cs" />
+    <Compile Include="Interfaces\Repositories\IPlayerRepository.cs" />
     <Compile Include="Interfaces\Services\IConsoleService.cs" />
     <Compile Include="Interfaces\Services\IPlayerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,9 +63,7 @@
     <Compile Include="ValueObjests\Email.cs" />
     <Compile Include="ValueObjests\NamePerson.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Diagrams\XGames.cd" />
   </ItemGroup>
