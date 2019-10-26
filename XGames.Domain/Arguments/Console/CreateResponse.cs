@@ -6,6 +6,6 @@ namespace XGames.Domain.Arguments.Console
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public string Mensage { get; set; }
+        public string Menssage { get; set; }
     }
 }
