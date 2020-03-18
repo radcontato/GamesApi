@@ -5,6 +5,6 @@ namespace XGames.Domain.Arguments.Player
     public class AuthenticateRequest : IRequest
     {
         public string Email { get; set; }
-        public string Senha{ get; set; }
+        public string Password{ get; set; }
     }
 }

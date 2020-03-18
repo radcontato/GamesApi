@@ -1,7 +1,9 @@
-﻿using XGames.Domain.Arguments.Player;
+﻿using System;
+using System.Linq;
+using XGames.Domain.Arguments.Player;
 using XGames.Domain.Services;
 
-namespace XGames.Console
+namespace XGames.ConsoleAplication
 {
     class Program
     {
@@ -10,10 +12,16 @@ namespace XGames.Console
             var service = new PlayerService();
             var request = new AuthenticateRequest();
             request.Email = "roberto@gmail.com";
-            request.Senha = "asdasd";
+            request.Password = "123456789";
 
             var response = service.Authenticate(request);
 
+            Console.WriteLine("Serviço é valido => " + service.IsValid());
+
+            service.Notifications.ToList().ForEach(
+                x => Console.WriteLine(x.Message));
+
+            Console.ReadKey();
         }
     }
 }

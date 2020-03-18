@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XGames.Domain", "XGames.Domain\XGames.Domain.csproj", "{EEA59AFD-49EC-4D97-9D60-A8397C1E3CD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XGames.Console", "XGames.Console\XGames.Console.csproj", "{AE0F04B2-3AA3-42A2-B365-BF058E02D539}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XGames.ConsoleAplication", "XGames.Console\XGames.ConsoleAplication.csproj", "{AE0F04B2-3AA3-42A2-B365-BF058E02D539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

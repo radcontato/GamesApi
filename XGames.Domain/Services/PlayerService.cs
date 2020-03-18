@@ -1,11 +1,16 @@
-﻿using System;
+﻿using prmToolkit.NotificationPattern;
+using prmToolkit.NotificationPattern.Extensions;
+using System;
 using XGames.Domain.Arguments.Player;
+using XGames.Domain.Entities;
 using XGames.Domain.Interfaces.Repositories;
 using XGames.Domain.Interfaces.Services;
+using XGames.Domain.Resources;
+using XGames.Domain.ValueObjests;
 
 namespace XGames.Domain.Services
 {
-    public class PlayerService : IPlayerService
+    public class PlayerService : Notifiable, IPlayerService
     {
         private readonly IPlayerRepository _playerRepository;
 
@@ -29,37 +34,23 @@ namespace XGames.Domain.Services
         {
             if (request == null)
             {
-                throw new Exception("Request Vazio.");
+                AddNotification("AuthenticateRequest", Message.X0_E_OBRIGATORIO.ToFormat("AuthenticateRequest"));
             }
 
-            if (string.IsNullOrEmpty(request.Email))
-            {
-                throw new Exception("Informe um e-mail.");
-            }
 
-            if (isEmail(request.Email))
-            {
-                throw new Exception("Informe um e-mail válido.");
-            }
+            var email = new Email(request.Email);
+            var player = new Player(email, request.Password);
 
-            if (string.IsNullOrEmpty(request.Senha))
-            {
-                throw new Exception("Informe uma senha.");
-            }
+            AddNotifications(player);
 
-            if (request.Senha.Length < 6)
+            if (player.IsInvalid())
             {
-                throw new Exception("Informe uma senha com mais que 6 caracteres.");
+                return null;
             }
 
             var response = _playerRepository.Authenticate(request);
 
             return response;
-        }
-
-        private bool isEmail(string email)
-        {
-            return false;
         }
     }
 }
