@@ -5,8 +5,9 @@ namespace XGames.Domain.Arguments.Player
 {
     public class CreateRequest : IRequest
     {
-        public NamePerson NamePerson { get; set; }
-        public Email Email { get; set; }
-        public string Senha { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string PassWord { get; set; }
     }
 }

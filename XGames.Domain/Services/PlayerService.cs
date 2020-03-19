@@ -26,7 +26,21 @@ namespace XGames.Domain.Services
 
         public CreateResponse Create(CreateRequest request)
         {
-            Guid id = _playerRepository.Create(request);
+
+            var namePerson = new NamePerson(request.FirstName, request.LastName);
+            var email = new Email(request.Email);
+            var password = request.PassWord;
+
+            var player = new Player(namePerson, email, password);
+
+
+            if (IsInvalid())
+            {
+                return null;
+            }
+
+            Guid id = _playerRepository.Create(player);
+
             return new CreateResponse() { Id = id, Message = "OOperation successfully" };
         }
 

@@ -193,6 +193,7 @@
     <Compile Include="Entities\MyGame.cs" />
     <Compile Include="Entities\Player.cs" />
     <Compile Include="Enum\StatusPlayerEnum.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
     <Compile Include="Interfaces\Arguments\IRequest.cs" />
     <Compile Include="Interfaces\Arguments\IResponse.cs" />
     <Compile Include="Interfaces\Repositories\IPlayerRepository.cs" />

@@ -86,5 +86,23 @@ namespace XGames.Domain.Resources {
                 return ResourceManager.GetString("X0_INVALIDO", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Obrigatoria e deve conter entre {1} e {2} caracteres.
+        /// </summary>
+        public static string X0_OBRIGATORIA_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES {
+            get {
+                return ResourceManager.GetString("X0_OBRIGATORIA_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Obrigatorio e deve conter entre {1} e {2} caracteres.
+        /// </summary>
+        public static string X0_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES {
+            get {
+                return ResourceManager.GetString("X0_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES", resourceCulture);
+            }
+        }
     }
 }
