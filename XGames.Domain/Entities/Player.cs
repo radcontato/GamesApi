@@ -48,6 +48,11 @@ namespace XGames.Domain.Entities
         public Email Email { get; private set; }
         public string Password { get; private set; }
         public StatusPlayerEnum Status { get; private set; }
+
+        public override string ToString()
+        {
+            return this.NamePerson.FirstName + this.NamePerson.LastName;
+        }
     }
 }
 

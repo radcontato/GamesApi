@@ -187,6 +187,9 @@
     <Compile Include="Arguments\Player\AuthenticateRequest.cs" />
     <Compile Include="Arguments\Player\CreateRequest.cs" />
     <Compile Include="Arguments\Player\CreateResponse.cs" />
+    <Compile Include="Arguments\Player\PlayerResponse.cs" />
+    <Compile Include="Arguments\Player\UpdateRequest.cs" />
+    <Compile Include="Arguments\Player\UpdateResponse.cs" />
     <Compile Include="Entities\Console.cs" />
     <Compile Include="Entities\Game.cs" />
     <Compile Include="Entities\GameConsole.cs" />

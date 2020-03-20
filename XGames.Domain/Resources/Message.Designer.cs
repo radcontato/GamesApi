@@ -61,7 +61,16 @@ namespace XGames.Domain.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} é Obrigatório.
+        ///   Looks up a localized string similar to Operação realizada com sucesso..
+        /// </summary>
+        public static string OPERACAO_REALIZADA_COM_SUCESSO {
+            get {
+                return ResourceManager.GetString("OPERACAO_REALIZADA_COM_SUCESSO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} é Obrigatório..
         /// </summary>
         public static string X0_E_OBRIGATORIO {
             get {
@@ -88,7 +97,7 @@ namespace XGames.Domain.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} Obrigatoria e deve conter entre {1} e {2} caracteres.
+        ///   Looks up a localized string similar to {0} Obrigatoria e deve conter entre {1} e {2} caracteres..
         /// </summary>
         public static string X0_OBRIGATORIA_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES {
             get {
@@ -97,7 +106,7 @@ namespace XGames.Domain.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} Obrigatorio e deve conter entre {1} e {2} caracteres.
+        ///   Looks up a localized string similar to {0} Obrigatorio e deve conter entre {1} e {2} caracteres..
         /// </summary>
         public static string X0_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES {
             get {

@@ -1,6 +1,7 @@
 ﻿using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
-using System;
+using System.Collections.Generic;
+using System.Linq;
 using XGames.Domain.Arguments.Player;
 using XGames.Domain.Entities;
 using XGames.Domain.Interfaces.Repositories;
@@ -39,9 +40,9 @@ namespace XGames.Domain.Services
                 return null;
             }
 
-            Guid id = _playerRepository.Create(player);
+            player = _playerRepository.Create(player);
 
-            return new CreateResponse() { Id = id, Message = "OOperation successfully" };
+            return (CreateResponse)player;
         }
 
         public AuthenticateReponse Authenticate(AuthenticateRequest request)
@@ -62,9 +63,18 @@ namespace XGames.Domain.Services
                 return null;
             }
 
-            var response = _playerRepository.Authenticate(request);
+            player = _playerRepository.Authenticate(request);
 
-            return response;
+            return (AuthenticateReponse)player;
+        }
+
+        public UpdateResponse Update(UpdateRequest player)
+        {
+            throw new System.NotImplementedException();
+        }
+        public IEnumerable<PlayerResponse> listPlayers()
+        {
+            return _playerRepository.ListPlayers().ToList().Select(player => (PlayerResponse)player).ToList();
         }
     }
 }

@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="OPERACAO_REALIZADA_COM_SUCESSO" xml:space="preserve">
+    <value>Operação realizada com sucesso.</value>
+  </data>
   <data name="X0_E_OBRIGATORIO" xml:space="preserve">
-    <value>{0} é Obrigatório</value>
+    <value>{0} é Obrigatório.</value>
   </data>
   <data name="X0_INVALIDA" xml:space="preserve">
     <value>{0} Invalida.</value>
@@ -127,9 +130,9 @@
     <value>{0} Invalido.</value>
   </data>
   <data name="X0_OBRIGATORIA_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES" xml:space="preserve">
-    <value>{0} Obrigatoria e deve conter entre {1} e {2} caracteres</value>
+    <value>{0} Obrigatoria e deve conter entre {1} e {2} caracteres.</value>
   </data>
   <data name="X0_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES" xml:space="preserve">
-    <value>{0} Obrigatorio e deve conter entre {1} e {2} caracteres</value>
+    <value>{0} Obrigatorio e deve conter entre {1} e {2} caracteres.</value>
   </data>
 </root>
