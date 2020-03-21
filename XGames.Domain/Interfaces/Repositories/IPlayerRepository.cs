@@ -12,5 +12,6 @@ namespace XGames.Domain.Interfaces.Repositories
         Player Create(Player player);
         Player Update(Player player);
         IEnumerable<Player> ListPlayers();
+        Player GetPlayersById(Guid id);
     }
 }

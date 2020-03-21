@@ -61,6 +61,15 @@ namespace XGames.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dados não encontrados..
+        /// </summary>
+        public static string DADOS_NAO_ENCONTRADOS {
+            get {
+                return ResourceManager.GetString("DADOS_NAO_ENCONTRADOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Operação realizada com sucesso..
         /// </summary>
         public static string OPERACAO_REALIZADA_COM_SUCESSO {

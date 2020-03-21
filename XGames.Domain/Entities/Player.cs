@@ -38,8 +38,6 @@ namespace XGames.Domain.Entities
                 //falta criptografia de senha;
             }
 
-
-
             AddNotifications(namePerson, email);
         }
 
@@ -48,6 +46,18 @@ namespace XGames.Domain.Entities
         public Email Email { get; private set; }
         public string Password { get; private set; }
         public StatusPlayerEnum Status { get; private set; }
+
+
+        public void UpdatePlayer(NamePerson name, Email email, StatusPlayerEnum status)
+        {
+            NamePerson = name;
+            Email = email;
+
+            new AddNotifications<Player>(this).IfFalse(status == StatusPlayerEnum.Active,
+                "Só é possível alterar jogador se estiver ativo");
+
+            AddNotifications(name, email);
+        }
 
         public override string ToString()
         {

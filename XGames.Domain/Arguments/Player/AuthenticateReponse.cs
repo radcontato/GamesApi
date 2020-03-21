@@ -1,4 +1,5 @@
-﻿using XGames.Domain.Interfaces.Arguments;
+﻿using System;
+using XGames.Domain.Interfaces.Arguments;
 
 namespace XGames.Domain.Arguments.Player
 {
@@ -17,6 +18,6 @@ namespace XGames.Domain.Arguments.Player
                 Email = player.Email.Adress,
                 Status = (int)player.Status
             };
-        }
+        }      
     }
 }
