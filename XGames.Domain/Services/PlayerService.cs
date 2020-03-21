@@ -94,7 +94,7 @@ namespace XGames.Domain.Services
                 return null;
             }
 
-            player = _playerRepository.Update(p);
+            player = _playerRepository.Update(player);
 
             return (UpdateResponse)player;
         }
