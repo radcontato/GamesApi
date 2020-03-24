@@ -13,7 +13,7 @@ namespace XGames.Infra.Persistence
         }
 
         public IDbSet<Player> players { get; set; }
-        public IDbSet<Console> consoles { get; set; }
+        public IDbSet<ConsolePlataform> consoles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
