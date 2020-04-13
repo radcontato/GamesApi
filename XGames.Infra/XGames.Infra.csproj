@@ -62,6 +62,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\Map\MapConsole.cs" />
     <Compile Include="Persistence\Map\MapPlayer.cs" />
+    <Compile Include="Persistence\Repositories\PlayerRepository.cs" />
     <Compile Include="Persistence\XGamesContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,9 +70,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Persistence\Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\XGames.Domain\XGames.Domain.csproj">
       <Project>{EEA59AFD-49EC-4D97-9D60-A8397C1E3CD0}</Project>
