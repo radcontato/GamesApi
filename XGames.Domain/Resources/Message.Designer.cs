@@ -19,7 +19,7 @@ namespace XGames.Domain.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Message {
@@ -61,11 +61,128 @@ namespace XGames.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A {0} deve ser maior ou igual a {1}..
+        /// </summary>
+        public static string A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1 {
+            get {
+                return ResourceManager.GetString("A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dados não encontrados..
         /// </summary>
         public static string DADOS_NAO_ENCONTRADOS {
             get {
                 return ResourceManager.GetString("DADOS_NAO_ENCONTRADOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Já existe um {0} chamado {1}..
+        /// </summary>
+        public static string JA_EXISTE_UM_X0_CHAMADO_X1 {
+            get {
+                return ResourceManager.GetString("JA_EXISTE_UM_X0_CHAMADO_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Já existe um {0} com a {1} {2}.
+        /// </summary>
+        public static string JA_EXISTE_UM_X0_COM_A_X1_X2 {
+            get {
+                return ResourceManager.GetString("JA_EXISTE_UM_X0_COM_A_X1_X2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Já existe um {0} com o {1} {2}.
+        /// </summary>
+        public static string JA_EXISTE_UM_X0_COM_O_X1_X2 {
+            get {
+                return ResourceManager.GetString("JA_EXISTE_UM_X0_COM_O_X1_X2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Já existe uma {0} chamada {1}..
+        /// </summary>
+        public static string JA_EXISTE_UMA_X0_CHAMADA_X1 {
+            get {
+                return ResourceManager.GetString("JA_EXISTE_UMA_X0_CHAMADA_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Já existe uma {0} com a {1} {2}.
+        /// </summary>
+        public static string JA_EXISTE_UMA_X0_COM_A_X1_X2 {
+            get {
+                return ResourceManager.GetString("JA_EXISTE_UMA_X0_COM_A_X1_X2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Já existe uma {0} com o {1} {2}.
+        /// </summary>
+        public static string JA_EXISTE_UMA_X0_COM_O_X1_X2 {
+            get {
+                return ResourceManager.GetString("JA_EXISTE_UMA_X0_COM_O_X1_X2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não é possível excluir um {0} associado a um {1}..
+        /// </summary>
+        public static string NAO_E_POSSIVEL_EXCLUIR_UM_X0_ASSOCIADO_A_UM_X1 {
+            get {
+                return ResourceManager.GetString("NAO_E_POSSIVEL_EXCLUIR_UM_X0_ASSOCIADO_A_UM_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não é possível excluir um {0} associado a uma {1}..
+        /// </summary>
+        public static string NAO_E_POSSIVEL_EXCLUIR_UM_X0_ASSOCIADO_A_UMA_X1 {
+            get {
+                return ResourceManager.GetString("NAO_E_POSSIVEL_EXCLUIR_UM_X0_ASSOCIADO_A_UMA_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não é possível excluir uma {0} associada a um {1}..
+        /// </summary>
+        public static string NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UM_X1 {
+            get {
+                return ResourceManager.GetString("NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UM_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não é possível excluir uma {0} associada a uma {1}..
+        /// </summary>
+        public static string NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UMA_X1 {
+            get {
+                return ResourceManager.GetString("NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UMA_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O {0} deve ser maior ou igual a {1}..
+        /// </summary>
+        public static string O_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1 {
+            get {
+                return ResourceManager.GetString("O_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objeto {0} é obrigatório..
+        /// </summary>
+        public static string OBJETO_X0_E_OBRIGATORIO {
+            get {
+                return ResourceManager.GetString("OBJETO_X0_E_OBRIGATORIO", resourceCulture);
             }
         }
         
@@ -79,7 +196,25 @@ namespace XGames.Domain.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} é Obrigatório..
+        ///   Looks up a localized string similar to {0} é obrigatória..
+        /// </summary>
+        public static string X0_E_OBRIGATORIA {
+            get {
+                return ResourceManager.GetString("X0_E_OBRIGATORIA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} é obrigatória e deve conter {1} caracteres..
+        /// </summary>
+        public static string X0_E_OBRIGATORIA_E_DEVE_CONTER_X1_CARACTERES {
+            get {
+                return ResourceManager.GetString("X0_E_OBRIGATORIA_E_DEVE_CONTER_X1_CARACTERES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} é obrigatório..
         /// </summary>
         public static string X0_E_OBRIGATORIO {
             get {
@@ -88,7 +223,16 @@ namespace XGames.Domain.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} Invalida..
+        ///   Looks up a localized string similar to {0} é obrigatório e deve conter {1} caracteres..
+        /// </summary>
+        public static string X0_E_OBRIGATORIO_E_DEVE_CONTER_X1_CARACTERES {
+            get {
+                return ResourceManager.GetString("X0_E_OBRIGATORIO_E_DEVE_CONTER_X1_CARACTERES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} inválida..
         /// </summary>
         public static string X0_INVALIDA {
             get {
@@ -97,7 +241,7 @@ namespace XGames.Domain.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} Invalido..
+        ///   Looks up a localized string similar to {0} inválido..
         /// </summary>
         public static string X0_INVALIDO {
             get {
@@ -106,7 +250,16 @@ namespace XGames.Domain.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} Obrigatoria e deve conter entre {1} e {2} caracteres..
+        ///   Looks up a localized string similar to {0} não informado..
+        /// </summary>
+        public static string X0_NAO_INFORMADO {
+            get {
+                return ResourceManager.GetString("X0_NAO_INFORMADO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} é obrigatória e deve conter entre {1} e {2} caracteres..
         /// </summary>
         public static string X0_OBRIGATORIA_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES {
             get {
@@ -115,7 +268,7 @@ namespace XGames.Domain.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} Obrigatorio e deve conter entre {1} e {2} caracteres..
+        ///   Looks up a localized string similar to {0} é obrigatório e deve conter entre {1} e {2} caracteres..
         /// </summary>
         public static string X0_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES {
             get {

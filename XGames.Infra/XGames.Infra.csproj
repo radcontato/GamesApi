@@ -62,6 +62,8 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\Map\MapConsole.cs" />
     <Compile Include="Persistence\Map\MapPlayer.cs" />
+    <Compile Include="Persistence\Repositories\Base\a.cs" />
+    <Compile Include="Persistence\Repositories\Base\BseRepository.cs" />
     <Compile Include="Persistence\Repositories\PlayerRepository.cs" />
     <Compile Include="Persistence\XGamesContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -2,13 +2,15 @@
 using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
 using System;
+using XGames.Domain.Entities.Base;
 using XGames.Domain.Enum;
+using XGames.Domain.Extensions;
 using XGames.Domain.Resources;
 using XGames.Domain.ValueObjests;
 
 namespace XGames.Domain.Entities
 {
-    public class Player : Notifiable
+    public class Player : EntityBase
     {
         public Player(Email email, string password)
         {
@@ -16,8 +18,12 @@ namespace XGames.Domain.Entities
             Password = password;
 
             new AddNotifications<Player>(this)
-                .IfNotEmail(x => x.Email.Adress, "Informe um e-mail válido")
                 .IfNullOrInvalidLength(x => x.Password, 6, 32, "A senha deve ter de 6 a 32 caracteres");
+
+            if (IsValid())
+            {
+                password = password.ConvertToMD5();
+            }
 
         }
 
@@ -35,7 +41,7 @@ namespace XGames.Domain.Entities
 
             if (IsValid())
             {
-                //falta criptografia de senha;
+                password = password.ConvertToMD5();
             }
 
             AddNotifications(namePerson, email);

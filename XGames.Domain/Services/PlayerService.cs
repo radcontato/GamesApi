@@ -1,5 +1,6 @@
 ﻿using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using XGames.Domain.Arguments.Player;
@@ -19,12 +20,10 @@ namespace XGames.Domain.Services
         {
 
         }
-
         public PlayerService(IPlayerRepository playerRepository)
         {
             _playerRepository = playerRepository;
         }
-
         public CreateResponse Create(CreateRequest request)
         {
 
@@ -44,7 +43,6 @@ namespace XGames.Domain.Services
 
             return (CreateResponse)player;
         }
-
         public AuthenticateReponse Authenticate(AuthenticateRequest request)
         {
             if (request == null)
@@ -63,11 +61,10 @@ namespace XGames.Domain.Services
                 return null;
             }
 
-            player = _playerRepository.Authenticate(request);
+            player = _playerRepository.GetBy(x => x.Email.Adress == player.Email.Adress, x => x.Password == player.Password);
 
             return (AuthenticateReponse)player;
         }
-
         public UpdateResponse Update(UpdateRequest request)
         {
             if (request == null)
@@ -75,7 +72,7 @@ namespace XGames.Domain.Services
                 AddNotification("UpdateRequest", Message.X0_E_OBRIGATORIO.ToFormat("UpdateRequest"));
             }
 
-            var player = _playerRepository.GetPlayersById(request.Id);
+            var player = _playerRepository.GetById(request.Id);
 
             if (player == null)
             {
@@ -94,13 +91,30 @@ namespace XGames.Domain.Services
                 return null;
             }
 
-            player = _playerRepository.Update(player);
+            _playerRepository.ToEdit(player);
 
             return (UpdateResponse)player;
         }
         public IEnumerable<PlayerResponse> ListPlayers()
         {
-            return _playerRepository.ListPlayers().ToList().Select(player => (PlayerResponse)player).ToList();
+            var players = _playerRepository.List().Select(player => (PlayerResponse)player).ToList();
+
+            return players;
+
+        }
+        public BaseResponse Delete(Guid id)
+        {
+            Player player = _playerRepository.GetById(id);
+
+            if (player == null)
+            {
+                AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
+                return null;
+            }
+
+            _playerRepository.Remove(player);
+
+            return new BaseResponse();
         }
     }
 }

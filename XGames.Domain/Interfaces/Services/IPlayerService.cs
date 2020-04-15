@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using XGames.Domain.Arguments;
+﻿using System;
+using System.Collections.Generic;
 using XGames.Domain.Arguments.Player;
-using XGames.Domain.Entities;
 
 namespace XGames.Domain.Interfaces.Services
 {
@@ -11,5 +10,6 @@ namespace XGames.Domain.Interfaces.Services
         CreateResponse Create(CreateRequest request);
         UpdateResponse Update(UpdateRequest player);
         IEnumerable<PlayerResponse> ListPlayers();
+        BaseResponse Delete(Guid id);
     }
 }
