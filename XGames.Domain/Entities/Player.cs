@@ -17,12 +17,11 @@ namespace XGames.Domain.Entities
             Email = email;
             Password = password;
 
-            new AddNotifications<Player>(this)
-                .IfNullOrInvalidLength(x => x.Password, 6, 32, "A senha deve ter de 6 a 32 caracteres");
+            new AddNotifications<Player>(this).IfNullOrInvalidLength(x => x.Password, 6, 32, "A senha deve ter de 6 a 32 caracteres");
 
             if (IsValid())
             {
-                password = password.ConvertToMD5();
+                Password = Password.ConvertToMD5();
             }
 
         }
@@ -32,28 +31,18 @@ namespace XGames.Domain.Entities
             NamePerson = namePerson;
             Email = email;
             Password = password;
-            Id = new Guid();
             Status = StatusPlayerEnum.InProgress;
 
-            new AddNotifications<Player>(this)
-                .IfNullOrInvalidLength(x => x.Password, 6, 32,
+            new AddNotifications<Player>(this).IfNullOrInvalidLength(x => x.Password, 6, 32,
                    Message.X0_OBRIGATORIA_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES.ToFormat("Senha", "3", "50"));
 
             if (IsValid())
             {
-                password = password.ConvertToMD5();
+                Password = Password.ConvertToMD5();
             }
 
             AddNotifications(namePerson, email);
         }
-
-        public Guid Id { get; private set; }
-        public NamePerson NamePerson { get; private set; }
-        public Email Email { get; private set; }
-        public string Password { get; private set; }
-        public StatusPlayerEnum Status { get; private set; }
-
-
         public void UpdatePlayer(NamePerson name, Email email, StatusPlayerEnum status)
         {
             NamePerson = name;
@@ -64,6 +53,12 @@ namespace XGames.Domain.Entities
 
             AddNotifications(name, email);
         }
+
+        public NamePerson NamePerson { get; private set; }
+        public Email Email { get; private set; }
+        public string Password { get; private set; }
+        public StatusPlayerEnum Status { get; private set; }
+
 
         public override string ToString()
         {

@@ -1,7 +1,6 @@
-﻿using prmToolkit.NotificationPattern;
+﻿using Microsoft.Practices.Unity;
+using prmToolkit.NotificationPattern;
 using System.Data.Entity;
-using Unity;
-using Unity.Lifetime;
 using XGames.Domain.Interfaces.Repositories;
 using XGames.Domain.Interfaces.Services;
 using XGames.Domain.Services;

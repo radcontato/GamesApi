@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Web.Http.Dependencies;
-using Unity;
 
 namespace XGame.IoC.Unity
 {

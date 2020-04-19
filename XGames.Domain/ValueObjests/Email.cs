@@ -6,6 +6,10 @@ namespace XGames.Domain.ValueObjests
 {
     public class Email : Notifiable
     {
+        protected Email()
+        {
+
+        }
         public Email(string adress)
         {
             Adress = adress;

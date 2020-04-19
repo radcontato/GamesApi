@@ -99,7 +99,8 @@ namespace XGames.Domain.Services
         }
         public IEnumerable<PlayerResponse> ListPlayers()
         {
-            var players = _playerRepository.List().Select(player => (PlayerResponse)player).ToList();
+
+            var players = _playerRepository.List().ToList().Select(player => (PlayerResponse)player).ToList();
 
             return players;
 

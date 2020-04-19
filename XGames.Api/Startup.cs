@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNet.WebApi.Extensions.Compression.Server;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
+using Microsoft.Practices.Unity;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Owin;
 using System;
 using System.Net.Http.Extensions.Compression.Core.Compressors;
 using System.Web.Http;
-using Unity;
 using XGame.IoC.Unity;
 using XGames.Api.Security;
 
@@ -17,8 +17,8 @@ namespace XGames.Api
     {
         public void Configuration(IAppBuilder app)
         {
-            HttpConfiguration config = new HttpConfiguration();        
-            SwaggerConfig.Register(config);       
+            HttpConfiguration config = new HttpConfiguration();
+            SwaggerConfig.Register(config);
             var container = new UnityContainer();
             DependencyResolver.Resolve(container);
             config.DependencyResolver = new UnityResolver(container);
@@ -31,19 +31,12 @@ namespace XGames.Api
 
         public static void ConfigureWebApi(HttpConfiguration config)
         {
-            // Remove o XML
             var formatters = config.Formatters;
             formatters.Remove(formatters.XmlFormatter);
-
-            //Compacta retorno de cada requisição realizada para api
             config.MessageHandlers.Insert(0, new ServerCompressionHandler(new GZipCompressor(), new DeflateCompressor()));
-
-            // Modifica a identação
             var jsonSettings = formatters.JsonFormatter.SerializerSettings;
             jsonSettings.Formatting = Formatting.Indented;
             jsonSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-
-            // Modifica a serialização
             formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.None;
 
             Register(config);
@@ -51,9 +44,6 @@ namespace XGames.Api
 
         public static void Register(HttpConfiguration config)
         {
-            //add Uow action filter globally
-            //config.Filters.Add(new UnitOfWorkActionFilter());
-
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

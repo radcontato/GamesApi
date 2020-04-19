@@ -1,5 +1,4 @@
 ﻿using System;
-using XGames.Domain.Arguments.Player;
 using XGames.Domain.Entities;
 using XGames.Domain.Interfaces.Repositories;
 using XGames.Infra.Persistence.Repositories.Base;

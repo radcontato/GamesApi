@@ -19,8 +19,8 @@ namespace XGames.Domain.Arguments.Player
                 Email = player.Email.Adress,
                 FirstName = player.NamePerson.FirstName,
                 LastName = player.NamePerson.LastName,
-                NameComplete = player.ToString()
-              //  Status = player.Status.ToString()                
+                NameComplete = player.NamePerson.FirstName + " " + player.NamePerson.LastName,
+                Status = player.Status.ToString()
             };
         }
     }

@@ -35,5 +35,24 @@ namespace XGames.Api.Controllers
                 return await ResponseExceptionAsync(ex);
             }
         }
+
+        [Route("List")]
+        [HttpGet]
+        public async Task<HttpResponseMessage> List()
+        {
+            try
+            {
+                var response = _playerService.ListPlayers();
+
+                return await ResponseAsync(response, _playerService);
+            }
+            catch (Exception ex)
+            {
+                return await ResponseExceptionAsync(ex);
+            }
+        }
+
+
+
     }
 }
