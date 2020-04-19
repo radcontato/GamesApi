@@ -14,28 +14,16 @@ namespace XGame.IoC.Unity
     {
         public static void Resolve(UnityContainer container)
         {
-
             container.RegisterType<DbContext, XGamesContext>(new HierarchicalLifetimeManager());
-         
+
             container.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager());
             container.RegisterType<INotifiable, Notifiable>(new HierarchicalLifetimeManager());
 
-            //Serviço de Domain
-            //container.RegisterType(typeof(IServiceBase<,>), typeof(ServiceBase<,>));
-
             container.RegisterType<IPlayerService, PlayerService>(new HierarchicalLifetimeManager());
-            // container.RegisterType<IPlataformService, ServiceJogo>(new HierarchicalLifetimeManager());
-
-
-
-            //Repository
-            //    container.RegisterType(typeof(IRepositoryBase<,>), typeof(RepositoryBase<,>));
+            container.RegisterType<IGameService, GameService>(new HierarchicalLifetimeManager());
 
             container.RegisterType<IPlayerRepository, PlayerRepository>(new HierarchicalLifetimeManager());
-    //        container.RegisterType<IRepositoryJogo, RepositoryJogo>(new HierarchicalLifetimeManager());
-
-
-
+            container.RegisterType<IGameRepository, GameRepository>(new HierarchicalLifetimeManager());
         }
     }
 }

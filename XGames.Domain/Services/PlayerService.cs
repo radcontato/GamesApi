@@ -7,6 +7,7 @@ using XGames.Domain.Arguments.Player;
 using XGames.Domain.Entities;
 using XGames.Domain.Interfaces.Repositories;
 using XGames.Domain.Interfaces.Services;
+using XGames.Domain.Interfaces.Services.Base;
 using XGames.Domain.Resources;
 using XGames.Domain.ValueObjests;
 
@@ -26,6 +27,10 @@ namespace XGames.Domain.Services
         }
         public CreateResponse Create(CreateRequest request)
         {
+            if(request == null)
+            {
+                AddNotification("Adicionar", Message.OBJETO_X0_E_OBRIGATORIO.ToFormat("CreateRequest"));
+            }
 
             var namePerson = new NamePerson(request.FirstName, request.LastName);
             var email = new Email(request.Email);
@@ -35,6 +40,12 @@ namespace XGames.Domain.Services
 
             AddNotifications(namePerson, email);
 
+            var playerExist = _playerRepository.Exists(x => x.Email.Adress == request.Email);
+
+            if (playerExist)
+            {
+                AddNotification("E-mail", Message.JA_EXISTE_UM_X0_CHAMADO_X1.ToFormat("e-mail", request.Email));
+            }
 
             if (IsInvalid())
             {
@@ -63,7 +74,7 @@ namespace XGames.Domain.Services
                 return null;
             }
 
-            player = _playerRepository.GetBy(x => x.Email.Adress == player.Email.Adress, x => x.Password == player.Password);
+            player = _playerRepository.GetBy(x => x.Email.Adress == player.Email.Adress &&  x.Password == player.Password);
 
             return (AuthenticateReponse)player;
         }

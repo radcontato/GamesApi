@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using XGames.Domain.Arguments.Player;
+using XGames.Domain.Interfaces.Services.Base;
 
 namespace XGames.Domain.Interfaces.Services
 {

@@ -192,10 +192,16 @@
     <Compile Include="Migrations\202003240302108_MapeandoPlataforma.designer.cs">
       <DependentUpon>202003240302108_MapeandoPlataforma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004191819184_Game.cs" />
+    <Compile Include="Migrations\202004191819184_Game.designer.cs">
+      <DependentUpon>202004191819184_Game.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\Map\MapConsole.cs" />
+    <Compile Include="Persistence\Map\MapGame.cs" />
     <Compile Include="Persistence\Map\MapPlayer.cs" />
     <Compile Include="Persistence\Repositories\Base\BaseRepository.cs" />
+    <Compile Include="Persistence\Repositories\GameRepository.cs" />
     <Compile Include="Persistence\Repositories\PlayerRepository.cs" />
     <Compile Include="Persistence\XGamesContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003240302108_MapeandoPlataforma.resx">
       <DependentUpon>202003240302108_MapeandoPlataforma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004191819184_Game.resx">
+      <DependentUpon>202004191819184_Game.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using XGames.Domain.Interfaces.Services;
+using XGames.Domain.Interfaces.Services.Base;
 using XGames.Infra.Transactions;
 
 namespace XGames.Api.Controllers.Base

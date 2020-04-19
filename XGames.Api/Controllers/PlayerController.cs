@@ -51,8 +51,5 @@ namespace XGames.Api.Controllers
                 return await ResponseExceptionAsync(ex);
             }
         }
-
-
-
     }
 }

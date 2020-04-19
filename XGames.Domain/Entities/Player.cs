@@ -12,6 +12,11 @@ namespace XGames.Domain.Entities
 {
     public class Player : EntityBase
     {
+        protected Player()
+        {
+
+        }
+
         public Player(Email email, string password)
         {
             Email = email;
