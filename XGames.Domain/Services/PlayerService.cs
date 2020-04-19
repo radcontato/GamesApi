@@ -33,6 +33,8 @@ namespace XGames.Domain.Services
 
             var player = new Player(namePerson, email, password);
 
+            AddNotifications(namePerson, email);
+
 
             if (IsInvalid())
             {

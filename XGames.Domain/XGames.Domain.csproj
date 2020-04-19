@@ -203,6 +203,7 @@
     <Compile Include="Interfaces\Repositories\Base\IBaseRepository.cs" />
     <Compile Include="Interfaces\Repositories\IPlayerRepository.cs" />
     <Compile Include="Interfaces\Services\BaseResponse.cs" />
+    <Compile Include="Interfaces\Services\IBaseService.cs" />
     <Compile Include="Interfaces\Services\IConsoleService.cs" />
     <Compile Include="Interfaces\Services\IPlayerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
